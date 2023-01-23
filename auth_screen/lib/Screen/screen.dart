@@ -20,19 +20,23 @@ class _ScreenState extends State<Screen> {
       children: [
         Padding(
           padding: EdgeInsets.only(top: 25),
-          child: Card(
-            elevation: 1,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
-              width: 300,
-              child: TextField(
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(
-                    color: Colors.grey
+          child: Container(
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(horizontal: 50),
+            child: Card(
+              elevation: 1,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                width: 300,
+                child: TextField(
+                  cursorColor: Colors.orange,
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+                    hintText:  widget.hinttext1,
+                    border: InputBorder.none,
                   ),
-                  hintText:  widget.hinttext1,
-                  border: InputBorder.none,
                 ),
               ),
             ),
@@ -40,41 +44,45 @@ class _ScreenState extends State<Screen> {
         ),
         Padding(
           padding: EdgeInsets.only(top: 15),
-          child: Card(
-            elevation: 1,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
-              width: 300,
-              child: (widget.isLogin)?TextField(
-                obscureText: _isObscure,
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  hintText: widget.hinttext2,
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
-                  border: InputBorder.none,
-                  suffixIcon:IconButton(
-                    icon: Icon(
-                          color:Colors.grey,
-                        _isObscure ? Icons.visibility : Icons.visibility_off),
-                    onPressed: () {
-                      setState(() {
-                        _isObscure = !_isObscure;
-                      });
-                    }
+          child: Container(
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(horizontal: 50),
+            child: Card(
+              elevation: 1,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+                width: 300,
+                child: (widget.isLogin)?TextField(
+                  obscureText: _isObscure,
+                  cursorColor: Colors.orange,
+                  decoration: InputDecoration(
+                    hintText: widget.hinttext2,
+                    hintStyle: TextStyle(
+                      color: Colors.grey
                     ),
-                ),
-              )
-              :TextField(
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.orange,
-                decoration: InputDecoration(
-                  hintText: widget.hinttext2,
-                  hintStyle: TextStyle(
-                    color: Colors.grey
+                    border: InputBorder.none,
+                    suffixIcon:IconButton(
+                      icon: Icon(
+                            color:Colors.grey,
+                          _isObscure ? Icons.visibility : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      }
+                      ),
                   ),
-                  border: InputBorder.none,
+                )
+                :TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  cursorColor: Colors.orange,
+                  decoration: InputDecoration(
+                    hintText: widget.hinttext2,
+                    hintStyle: TextStyle(
+                      color: Colors.grey
+                    ),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
             ),

@@ -46,12 +46,12 @@ class _MyAppState extends State<MyApp> {
                 padding: EdgeInsets.only(top: 100),
                 width: double.infinity,
                 height: 300,
-                child: Image.asset('assets/img1.png'),
+                child: Image.asset('assets/img1.png',),
               ),
                Container(
-                height: 60,
-                
-                margin: EdgeInsets.only(left: 60,right: 60,top: 20),
+                  width: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: 50,vertical: 10),
+                height: 50,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 210, 209, 209),
                   borderRadius: BorderRadius.circular(40)
