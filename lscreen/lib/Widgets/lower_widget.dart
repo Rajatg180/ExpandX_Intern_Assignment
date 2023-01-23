@@ -6,27 +6,30 @@ class LowerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 20),
+      margin: EdgeInsets.all(20),
       width: double.infinity,
       height: MediaQuery.of(context).size.width*0.15,
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            margin: EdgeInsets.only(left: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
               border: Border.all(color: Color.fromARGB(255, 222, 222, 222)),
               borderRadius: BorderRadius.circular(5),
             ),
-            child: Icon(
-              Icons.money,
-              color: Colors.orange,
-            ),
+              child: Icon(
+                Icons.money,
+                color: Colors.orange,
+              ),
           ),
           Container(
             margin: EdgeInsets.only(left: 20),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
@@ -40,8 +43,12 @@ class LowerWidget extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(left: 70),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
             child: Container(
               padding: EdgeInsets.all(4),
               decoration: BoxDecoration(
@@ -57,6 +64,7 @@ class LowerWidget extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(left: 20),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
@@ -70,6 +78,9 @@ class LowerWidget extends StatelessWidget {
               ],
             ),
           )
+
+            ],
+          ),
         ],
       ),
     );

@@ -28,7 +28,7 @@ class GraphWidget extends StatelessWidget {
         ];
         
     return Container(
-      height: MediaQuery.of(context).size.height*0.47,
+      height: MediaQuery.of(context).size.height*0.60,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
       decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class GraphWidget extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.all(3),
-            height: 350,
+            height: MediaQuery.of(context).size.height*0.53,
             child: SfCartesianChart(
               series: <ChartSeries>[
                   LineSeries<ChartData, int>(

@@ -61,14 +61,16 @@ class MyApp extends StatelessWidget {
             ),
           ),
       ),
-      body: Column(
-        children: [
-          MiraeWidget(),
-          PercentWidget(),
-          GraphWidget(),
-          LowerWidget(),
-          ButtonWidget(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            MiraeWidget(),
+            PercentWidget(),
+            GraphWidget(),
+            LowerWidget(),
+            ButtonWidget(),
+          ],
+        ),
       ),
       ),
     );

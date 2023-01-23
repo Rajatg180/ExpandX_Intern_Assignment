@@ -8,11 +8,12 @@ class MiraeWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(15),
       width: double.infinity,
-      height: MediaQuery.of(context).size.height*0.13,
+      height: MediaQuery.of(context).size.height*0.15,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
            Container(
+             width: MediaQuery.of(context).size.width*0.2,
              padding: EdgeInsets.all(5),
              decoration: BoxDecoration(
               border: Border.all(color: Color.fromARGB(255, 222, 222, 222)),

@@ -7,7 +7,8 @@ class PercentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 5),
-      height: MediaQuery.of(context).size.height*0.08,
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height*0.10,
       child : Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
