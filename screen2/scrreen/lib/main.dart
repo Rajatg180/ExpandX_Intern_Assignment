@@ -178,12 +178,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 10,left: 20),
-              width: double.infinity,
-              height: 290,
-              child: CategoriesWidget(),
-            ),
+            CategoriesWidget(),
             Padding(
               padding: EdgeInsets.only(left: 20,top: 10),
               child: Text(
